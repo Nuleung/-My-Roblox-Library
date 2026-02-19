@@ -1,5 +1,7 @@
 --[[
 본 모듈은 순전히 HitboxCaster.lua의 이용을 편리하게 하기 위한 예시 모듈에 불과합니다.
+&
+local HitboxCaster = require(script:FindFirstChild("HitboxCaster")) -> 위치는 히트박스케스터 모듈을 향하게 수정해주시면 작동합니다.
 ]]
 
 --[Service]
@@ -64,7 +66,7 @@ function HitBoxModule:CastEnd(Mount : number)
 	for _, Connection : RBXScriptConnection in self.connectContent  do
 		Connection:Disconnect()
 	end
-	--Function()
+	
 	return self
 end
 
