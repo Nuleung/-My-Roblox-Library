@@ -36,7 +36,6 @@ end
 
 
 local function GetDistance(Object : any, EnemyCharacter : Instance)
-	--print(EnemyCharacter.Parent)
 	local EnemyHRP = EnemyCharacter:FindFirstChild("HumanoidRootPart")
 	return (Object.CFrame.Position - EnemyHRP.CFrame.Position)
 end
@@ -123,7 +122,7 @@ local case = {
 }
 
 local effect = {
-	["ignore"] = function(EnemyCharacter, Damage : number, Late : number, Rate : number)--가드무시
+	["ignore"] = function(EnemyCharacter, Damage : number, Late : number, Rate : number)
 		local Humanoid = EnemyCharacter:FindFirstChild("Humanoid")
 		spawn(function()
 			for i=1, Rate do
@@ -133,7 +132,7 @@ local effect = {
 			end
 		end)
 	end,
-	["exclude"] = function(EnemyCharacter, Damage : number, Late : number, Rate : number)--
+	["exclude"] = function(EnemyCharacter, Damage : number, Late : number, Rate : number)
 		local Humanoid = EnemyCharacter:FindFirstChild("Humanoid")
 		spawn(function()
 			for i=1, Rate do
