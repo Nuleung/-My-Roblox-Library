@@ -4,11 +4,21 @@
 ## 🗂️ 모듈 목록
 
 ### 1. [Referencer](./Referencer.lua)
-- **용도**: 테이블 데이터의 깊은 곳(Deep Index)을 캐싱하여 빠르고 안전하게 참조합니다.
-- **주요 기능**: 
-    - 단일 키(String) 및 경로(Table) 탐색 지원
-    - Weak Table 기반 자동 메모리 관리
-    - 에러 방지(Defensive Programming) 설계
+- **용도**: 복잡한 테이블 데이터의 특정 인덱스를 캐싱하여 접근 속도를 최적화합니다.
+- **특징**: 
+    - 단일 키(String) 및 테이블 경로(Path) 탐색 지원.
+    - `Weak Table` 기반 캐싱으로 메모리 누수 방지.
+    - 데이터 구조가 깨져도 에러를 뿜지 않는 방어적 설계.
+
+### 2. [Hitbox System](./HitboxSystem/)
+- **용도**: `Method-Case-Effect` 구조를 가진 객체 지향형 히트박스 프레임워크입니다.
+- **구성**:
+    - `HitBoxModule.lua`: 외부 인터페이스 및 설정 (메서드 체이닝 지원 & HitboxCaster.lua 이용 지원).
+    - `HitboxCaster.lua`: 실제 히트박스 판정 및 로직 처리 엔진.
+- **특징**:
+    - **Method**: 내적(Dot Product), 원형, 박스 등 다양한 판정 방식 지원.
+    - **Case**: 가드 유무, 배후 타격 여부 등 복잡한 조건 필터링.
+    - **Effect**: 넉백, 대미지, 파티클 등 타격 후 발생할 효과를 모듈화하여 관리.
 
 ---
 
