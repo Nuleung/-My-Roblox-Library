@@ -16,7 +16,7 @@
     - `HitBoxModule.lua`: 외부 인터페이스 및 설정 (메서드 체이닝 지원 & HitboxCaster.lua 이용 지원).
     - `HitboxCaster.lua`: 실제 히트박스 판정 및 로직 처리 엔진.
 - **특징**:
-    - **Method**: 내적(Dot Product), 원형, 박스 등 다양한 판정 방식 지원.
+    - **Method**: 내적(Dot Product), 원형, 박스(개발 중) 등 다양한 판정 방식 지원.
     - **Case**: 가드 유무, 배후 타격 여부 등 복잡한 조건 필터링.
     - **Effect**: 넉백, 대미지, 파티클 등 타격 후 발생할 효과를 모듈화하여 관리.
 
